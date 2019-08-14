@@ -10,3 +10,8 @@ module.exports = routes;
 const models = require('./models');
 
 routes.use('/models', models);
+
+//// adding cars to the top and not behind models
+const cars = require('./cars');
+
+routes.use('/cars', cars)

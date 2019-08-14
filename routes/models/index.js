@@ -11,3 +11,8 @@ module.exports = models;
 const single = require("./single");
 
 models.get('/:modelId', single);
+
+////////////// returns cars as a nested resource of models
+const cars = require('./cars');
+
+models.use('/:modelId/cars', cars)
