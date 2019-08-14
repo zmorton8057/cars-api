@@ -16,3 +16,10 @@ models.get('/:modelId', single);
 const cars = require('./cars');
 
 models.use('/:modelId/cars', cars)
+
+
+
+/////////////Error Handling for 404 response or Data that does not exist
+const findObject = require('../../utils/findObject')
+
+models.param('modelId', findObject('model'));
